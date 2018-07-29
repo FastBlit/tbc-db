@@ -34,6 +34,10 @@ It will provide you a Menu With Various Installation Options and Configurations 
 
 For a full installation guide, please refer to [CMaNGOS installation instructions][14].
 
+Configure InnoDB Tables & my.cnf File
+-------------------------------------
+Most of the database tables by default are configured as MyISAM to allow for hosting on servers with low memory limits. We can gain row-level over table-level locking in the database and improve on overall performance and reliability by converting all MyISAM tables to InnoDB, which requires higher memory usage on the server. We should also configure the my.cnf file to create larger InnoDB mempools to be used with the new tables and for other general performance optmization settings.
+
 And if something goes wrong?
 ----------------------------
 The best way to submit an issue is to use tbc-db github.
